@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+REPO="willfish/sniffy"
+LATEST_TAG=$(curl -s https://api.github.com/repos/$REPO/releases/latest | grep "tag_name" | cut -d '"' -f 4)
+
+if [ -z "$LATEST_TAG" ]; then
+  echo "Failed to fetch latest release."
+  exit 1
+fi
+
+OS=$(uname -s | tr '[:upper:]' '[:lower:]')
+ARCH=$(uname -m)
+if [ "$ARCH" = "x86_64" ]; then ARCH="amd64"; fi
+if [ "$ARCH" = "aarch64" ]; then ARCH="arm64"; fi
+
+BINARY="sniffy-${OS}-${ARCH}"
+
+URL="https://github.com/$REPO/releases/download/$LATEST_TAG/$BINARY"
+
+curl -L -o sniffy "$URL"
+chmod +x sniffy
+
+mv sniffy /usr/local/bin/sniffy
+
+echo "Installed Sniffy $LATEST_TAG"
