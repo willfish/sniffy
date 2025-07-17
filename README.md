@@ -288,7 +288,7 @@ make build-all
 The project uses automated releases that build for multiple platforms:
 
 - **Linux**: AMD64, ARM64
-- **macOS**: AMD64 (Intel), ARM64 (Apple Silicon)  
+- **macOS**: AMD64 (Intel), ARM64 (Apple Silicon)
 
 Binaries are automatically built and uploaded to GitHub Releases using the naming convention:
 `sniffy-{os}-{arch}`
