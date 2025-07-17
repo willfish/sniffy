@@ -2,6 +2,9 @@
 
 A beautiful, interactive CLI tool for analyzing and managing potentially unused AWS Secrets Manager secrets. Built with the Charm TUI libraries for a delightful terminal experience.
 
+https://github.com/user-attachments/assets/ae77ac55-1624-4f5c-be57-b2a7f3c64cb3
+
+
 ## ✨ Features
 
 - **🔍 Smart Secret Analysis** - Automatically identifies secrets that haven't been accessed in 14+ days
