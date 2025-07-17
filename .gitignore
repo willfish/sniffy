@@ -18,3 +18,9 @@ bin
 *.out
 
 bootstrap
+
+sniffy
+out/
+result
+
+vendor/
