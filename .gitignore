@@ -24,3 +24,4 @@ out/
 result
 
 vendor/
+.pre-commit-config-nix.yaml
